@@ -1,0 +1,333 @@
+/* Genel sayfa stil tanımlamaları */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("12.jpeg");
+  background-repeat: repeat; /* Veya 'no-repeat' kullanarak resmi tekrar etmeyi durdurun */
+  background-attachment: fixed;
+  background-size: cover; /* Arka plan resminin ekran boyutuna uyum sağlaması */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background-image: url("logo1.png");
+  background-repeat: no-repeat;
+  background-size: 50%; /* Arka plan resminin boyutu %50 olarak ayarlandı */
+  background-position: center;
+  height: 200px; /* Header yüksekliği */
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+section {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#paymentDetails {
+  margin-top: 0px;
+}
+
+/* Üye listesi stil tanımlamaları */
+.member {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Üye ekleme formundaki giriş alanları */
+#memberName {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.member:hover {
+  background-color: #f0f0f0;
+}
+
+.member div {
+  flex: 1;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Form stil tanımlamaları */
+form {
+  margin-bottom: 10px;
+}
+
+form input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+form button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Ödeme detaylarının kutuları */
+.monthBox {
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  margin: 5px;
+}
+
+/* Ödeme durumu kutuları */
+.statusBox {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  margin: 5px;
+}
+
+/* Ödenen aylar için arka plan rengi yeşil */
+.statusBox.green {
+  background-color: green;
+  color: white;
+}
+
+/* Ödenmeyen aylar için arka plan rengi kırmızı */
+.statusBox.red {
+  background-color: red;
+  color: white;
+}
+
+/* İptal etme butonu */
+.cancelButton {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #cc0000;
+}
+
+/* Üye ekleme formu */
+#addMemberForm {
+  margin-top: 20px;
+}
+
+/* Üye ekleme formundaki ekleme butonu */
+#addMemberButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addMemberButton:hover {
+  background-color: #0056b3;
+}
+
+/* Üye ekleme bölümü */
+#addMemberSection {
+  margin-top: 20px;
+}
+
+/* Kutu stili */
+.container {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Başlık stili */
+.container h2 {
+  margin-top: 0;
+}
+
+/* Giriş alanı ve butonun gruplandığı alan */
+.input-group {
+  display: flex;
+}
+
+/* Giriş alanı */
+.input-group input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buton */
+.input-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+/* Ekran genişliği 1250 pikselden küçük olduğunda */
+@media only screen and (max-width: 1250px) {
+  /* Tüm içerikleri biraz küçültme */
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .member {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .deleteButton,
+  .cancelButton {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .input-group input,
+  .input-group button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .monthBox,
+  .statusBox {
+    font-size: 12px;
+  }
+}
+/* Üye filtreleme bölümü */
+#filterMembers {
+  margin-bottom: 20px;
+}
+
+#filterInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Üye listesi */
+.member {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.member:hover {
+  background-color: #f0f0f0;
+}
+
+.member .name {
+  font-weight: bold;
+  color: #333;
+}
+
+.member .deleteButton {
+  float: right;
+  padding: 5px 10px;
+  background-color: #ff7f7f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.member .deleteButton:hover {
+  background-color: #ff4f4f;
+}
+
+/* Ödeme detayları */
+.monthBox {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.statusBox {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.statusBox.odenmedi {
+  background-color: #ff7f7f;
+}
+
+.statusBox.odendi {
+  background-color: #66bb6a;
+}
+
+.cancelButton {
+  background-color: #ff7f7f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelButton:hover {
+  background-color: #ff4f4f;
+}

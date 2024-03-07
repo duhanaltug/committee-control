@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sosyal Komite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sosyal Komite</h1>
+    </header>
+    <main>
+      <section id="membersSection">
+        <!-- Üye filtreleme bölümü -->
+        <div id="filterMembers">
+          <input type="text" id="filterInput" placeholder="Üye ara..." />
+        </div>
+
+        <!-- Üye listesi -->
+        <section id="memberList">
+          <!-- Üyeler buraya dinamik olarak ekleniyor -->
+        </section>
+      </section>
+
+      <section id="paymentDetails">
+        <!-- Ödeme detayları buraya eklenecek -->
+      </section>
+      <section id="addMemberSection">
+        <div class="container">
+          <h2>Üye Ekle</h2>
+          <form id="addMemberForm">
+            <div class="input-group">
+              <input type="text" id="memberName" placeholder="Üye Adı" />
+              <button type="submit" id="addMemberButton">Ekle</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
